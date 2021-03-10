@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>深度优先与广度优先遍历DOM(递归与非递归)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="manifest" href="/site.webmanifest">
+
+        
+    
+    <link rel='stylesheet' href="/./css/dracula.css">
+
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body>
+        <header class="al_header al_pos_fixed">
+    <div class="al_header_container dis_flex_jcenter">
+        <div class="al_header_container_left">
+            <div class="al_header_site_title">
+                <a href="/">Hexo</a>
+            </div>
+        </div>
+
+        <div class="dis_flex_jcenter">
+            <div class="al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-menu"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="al_sidebar">
+
+    <div class="al_sidebar_overlay al_full_cover"></div>
+
+    <div class="al_pos_fixed al_sidebar_cnt">
+        <div class="dis_flex_acenter al_sidebar_header">
+            <h3>Hexo</h3>
+            <div class="al_sidebar_close al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-close"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="al_sidebar_author_cnt">
+
+            <div class="al_sidebar_author_info">
+                <h4>John Doe</h4>
+                <img class="al_sidebar_avatar" src="https://yourAvatorURL">
+                <p></p>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+        
+    <div class="dis_flex_center al_lightbox_cnt al_full_cover">
+        <img class="al_lightbox_img"/>
+    </div>
+    <div class="al_page_background dis_flex_center al_full_cover"></div>
+    <div class="al_page_container">
+        <div class="al_pos_ab al_fake_background"></div>
+        <div class="al_main_container al_shadow al_main_page_container">
+            <article class="al_article">
+                <header>
+                    <h1 class="al_page_title">
+                        深度优先与广度优先遍历DOM(递归与非递归)
+                    </h1>
+                    <div class="al_page_info dis_flex">
+                        <div class="al_page_content_info">
+                            Tue October 13, 2020 06:12 PM
+                        </div>
+
+                        
+
+                        
+                        <span class="tags"></span>
+                    </div>
+                </header>
+
+                
+                    <div class="al_page_content_outline">
+                        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E4%B8%8E%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86DOM-%E9%80%92%E5%BD%92%E4%B8%8E%E9%9D%9E%E9%80%92%E5%BD%92"><span class="toc-text">深度优先与广度优先遍历DOM(递归与非递归)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95"><span class="toc-text">方法一：深度优先遍历算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95%EF%BC%9F"><span class="toc-text">什么是深度优先算法？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86"><span class="toc-text">递归实现深度优先遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%9E%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86"><span class="toc-text">非递归实现深度优先遍历</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95"><span class="toc-text">方法二：广度优先遍历算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%9E%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95"><span class="toc-text">非递归实现广度优先算法</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                
+
+                
+                <section id="post-body">
+                    <h1 id="深度优先与广度优先遍历DOM-递归与非递归"><a href="#深度优先与广度优先遍历DOM-递归与非递归" class="headerlink" title="深度优先与广度优先遍历DOM(递归与非递归)"></a>深度优先与广度优先遍历DOM(递归与非递归)</h1><p>若存在以下的DOM树结构我们改如何遍历所有的DOM节点;</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;root&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="方法一：深度优先遍历算法"><a href="#方法一：深度优先遍历算法" class="headerlink" title="方法一：深度优先遍历算法"></a>方法一：深度优先遍历算法</h2><h4 id="什么是深度优先算法？"><a href="#什么是深度优先算法？" class="headerlink" title="什么是深度优先算法？"></a>什么是深度优先算法？</h4><p>这里以二叉树为例</p>
+<p>若有二叉树</p>
+<p><img src="https://howlcn1997.github.io/2019/05/11/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E4%B8%8E%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86DOM-%E9%80%92%E5%BD%92%E4%B8%8E%E9%9D%9E%E9%80%92%E5%BD%92/%E4%BA%8C%E5%8F%89%E6%A0%91.png"></p>
+<p>深度优先遍历的结果：1 2 4 7 8 3 5 6 9 （若要深入了解，请自行百度”二叉树” “数据结构 图” “c语言 数据结构 深度优先遍历算法”）</p>
+<p>根据此算法编写JS代码</p>
+<h4 id="递归实现深度优先遍历"><a href="#递归实现深度优先遍历" class="headerlink" title="递归实现深度优先遍历"></a>递归实现深度优先遍历</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nodes = [];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">DFS</span>(<span class="params">node</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> child = node.children;</span><br><span class="line">    <span class="keyword">if</span>(child)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; child.length;i++)&#123;</span><br><span class="line">            nodes.push(child[i]);</span><br><span class="line">            child[i].children &amp;&amp; DFS(child[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> root = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>);</span><br><span class="line">DFS(<span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>));</span><br><span class="line"><span class="built_in">console</span>.log(nodes);</span><br></pre></td></tr></table></figure>
+<p>递归实现深度优先遍历代码优化</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nodes = [];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">DFS</span>(<span class="params">node</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(node)&#123;</span><br><span class="line">        nodes.push(node);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; node.children.length;i++)</span><br><span class="line">            DFS(node.children[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> root = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>);</span><br><span class="line">DFS(root);</span><br><span class="line"><span class="built_in">console</span>.log(nodes);</span><br></pre></td></tr></table></figure>
+<p>闭包封装DFS</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">DFS</span>(<span class="params">node</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> nodes = [];</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">node</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(node)&#123;</span><br><span class="line">            nodes.push(node);</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; node.children.length;i++)</span><br><span class="line">            fn(node.children[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    fn(node);</span><br><span class="line">    <span class="keyword">return</span> nodes;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> root = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(DFS(root));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="非递归实现深度优先遍历"><a href="#非递归实现深度优先遍历" class="headerlink" title="非递归实现深度优先遍历"></a>非递归实现深度优先遍历</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">DFS</span>(<span class="params">node</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> nodes = [];<span class="comment">//记录遍历到的节点</span></span><br><span class="line">    <span class="keyword">if</span>(node)&#123;</span><br><span class="line">        <span class="keyword">var</span> stark = [];<span class="comment">//栈</span></span><br><span class="line">        stark.push(node);</span><br><span class="line">        <span class="keyword">while</span>(stark.length)&#123; <span class="comment">//若栈不为空则一直出栈</span></span><br><span class="line">            <span class="keyword">var</span> temp = stark.pop();</span><br><span class="line">            nodes.push(temp);</span><br><span class="line">            <span class="keyword">if</span>(temp.children)</span><br><span class="line">                <span class="comment">// for(var i = 0;i &lt; temp.children.length;i++) //此法导致nodes中的元素顺序与页面上的顺序是相反的</span></span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">var</span> i = temp.children.length-<span class="number">1</span>;i &gt;= <span class="number">0</span> ;i--)</span><br><span class="line">                    stark.push(temp.children[i]);<span class="comment">//进栈</span></span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> nodes;</span><br><span class="line">&#125;   </span><br><span class="line"><span class="keyword">var</span> root = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(DFS(root));</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="方法二：广度优先遍历算法"><a href="#方法二：广度优先遍历算法" class="headerlink" title="方法二：广度优先遍历算法"></a>方法二：广度优先遍历算法</h2><p>广度优先遍历二叉树结果:1 2 3 4 5 6 7 8 9（若要深入了解，请自行百度”二叉树” “数据结构 图” “c语言 数据结构 广度优先遍历算法”）</p>
+<p>根据此算法编写JS代码</p>
+<h4 id="非递归实现广度优先算法"><a href="#非递归实现广度优先算法" class="headerlink" title="非递归实现广度优先算法"></a>非递归实现广度优先算法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BFS</span>(<span class="params">node</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> nodes = [];<span class="comment">//记录获取到的节点</span></span><br><span class="line">    <span class="keyword">if</span>(node)&#123;</span><br><span class="line">        <span class="keyword">var</span> queue  = [];</span><br><span class="line">        queue.push(node); <span class="comment">//进队</span></span><br><span class="line">        <span class="keyword">while</span>(queue.length)&#123;  <span class="comment">//只要队列不为空 就让其出队</span></span><br><span class="line">            <span class="keyword">var</span> temp = queue.shift();</span><br><span class="line">            nodes.push(temp);</span><br><span class="line">            <span class="keyword">if</span>(temp.children)</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; temp.children.length;i++)</span><br><span class="line">                    queue.push(temp.children[i]);</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> nodes;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> root = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(BFS(root));</span><br></pre></td></tr></table></figure>
+<p>到此，已用JS代码实现深度优先 广度优先算法，若有更好，效率更高的解决办法，欢迎与我讨论。</p>
+
+                </section>
+
+                
+                
+                
+
+            </article>
+
+            
+            <nav class="dis_flex al_post_nav">
+                <a class="al_post_nav_item dis_flex_acenter" href="/2020/12/18/%E6%B5%85%E8%B0%88TypeScript/">
+                    
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
+                        </svg>
+                        <span class="al_text_ellipsis al_post_nav_desc">浅谈TypeScript</span>
+                    
+                </a>
+                <a class="al_post_nav_item dis_flex_acenter" href="/2020/10/08/Express%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA/">
+                    
+                        <span class="al_text_ellipsis al_post_nav_desc">Express服务器的搭建</span>
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-right"></use>
+                        </svg>
+                    
+                </a>
+            </nav>
+        </div>
+    </div>
+
+
+        <div class="al_index_footer dis_flex_center">
+    <div class="al_index_footer_item al_index_footer_title">
+        John Doe
+    </div>
+
+    
+    
+
+    <div class="al_index_footer_item al_index_footer_extra">
+        Created By 
+        <a target="_blank" rel="noopener" href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
+         · Power By 
+        <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+    </div>
+
+    <div class="al_index_footer_item al_index_footer_extra_right">
+        All Right Reserved
+    </div>
+</div>
+
+        <script type="text/javascript" async="async" src="/javascripts/acelog.js"></script>
+        
+        
+        
+        
+    </body>
+</html>
+        
