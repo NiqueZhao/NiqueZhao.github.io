@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <title>ES6——class语法糖</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="manifest" href="/site.webmanifest">
+
+        
+    
+    <link rel='stylesheet' href="/./css/dracula.css">
+
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body>
+        <header class="al_header al_pos_fixed">
+    <div class="al_header_container dis_flex_jcenter">
+        <div class="al_header_container_left">
+            <div class="al_header_site_title">
+                <a href="/">niquezhao</a>
+            </div>
+        </div>
+
+        <div class="dis_flex_jcenter">
+            <div class="al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-menu"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="al_sidebar">
+
+    <div class="al_sidebar_overlay al_full_cover"></div>
+
+    <div class="al_pos_fixed al_sidebar_cnt">
+        <div class="dis_flex_acenter al_sidebar_header">
+            <h3>niquezhao</h3>
+            <div class="al_sidebar_close al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-close"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="al_sidebar_author_cnt">
+
+            <div class="al_sidebar_author_info">
+                <h4>赵书平</h4>
+                <img class="al_sidebar_avatar" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202102%2F18%2F20210218234737_ce4cf.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1617974352&t=3218761a443e54cc13ab4c6362f57d3a">
+                <p></p>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+        
+    <div class="dis_flex_center al_lightbox_cnt al_full_cover">
+        <img class="al_lightbox_img"/>
+    </div>
+    <div class="al_page_background dis_flex_center al_full_cover"></div>
+    <div class="al_page_container">
+        <div class="al_pos_ab al_fake_background"></div>
+        <div class="al_main_container al_shadow al_main_page_container">
+            <article class="al_article">
+                <header>
+                    <h1 class="al_page_title">
+                        ES6——class语法糖
+                    </h1>
+                    <div class="al_page_info dis_flex">
+                        <div class="al_page_content_info">
+                            Thu March 11, 2021 09:39 PM
+                        </div>
+
+                        
+
+                        
+                        <span class="tags"></span>
+                    </div>
+                </header>
+
+                
+                    <div class="al_page_content_outline">
+                        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#ES6%E2%80%94class%E8%AF%AD%E6%B3%95%E7%B3%96"><span class="toc-text">ES6—class语法糖</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BE%8B%E5%A6%82%EF%BC%9A"><span class="toc-text">例如：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#super%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">super关键字</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%BD%93%E4%BD%9C%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8"><span class="toc-text">1. 当作函数使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%BD%93%E4%BD%9C%E6%99%AE%E9%80%9A%E5%AF%B9%E8%B1%A1%E4%BD%BF%E7%94%A8"><span class="toc-text">2. 当作普通对象使用</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                
+
+                
+                <section id="post-body">
+                    <h3 id="ES6—class语法糖"><a href="#ES6—class语法糖" class="headerlink" title="ES6—class语法糖"></a>ES6—class语法糖</h3><blockquote>
+<p>首先，ES6 的 <code>class</code> 属于一种“语法糖”，所以只是写法更加优雅，更加像面对对象的编程，其思想和 ES5 是一致的。</p>
+</blockquote>
+<h5 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function Point(x, y) &#123;</span><br><span class="line">  this.x &#x3D; x;</span><br><span class="line">  this.y &#x3D; y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Point.prototype.toString &#x3D; function() &#123;</span><br><span class="line">  return &#96;($&#123;this.x&#125;,$&#123;this.y&#125;)&#96;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">point &#x3D; new Point(4,5);</span><br><span class="line">console.log(point.toString());</span><br></pre></td></tr></table></figure>
+
+<p>等同于</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Point &#123;</span><br><span class="line">  constructor(x, y) &#123;</span><br><span class="line">    this.x &#x3D; x;</span><br><span class="line">    this.y &#x3D; y;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  toString() &#123;</span><br><span class="line">    return &#96;($&#123;this.x&#125;,$&#123;this.y&#125;)&#96;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">const point &#x3D; new Point(1,2);</span><br><span class="line">console.log(point.toString());</span><br></pre></td></tr></table></figure>
+
+<p>其中 <code>constructor</code> 方法是类的构造函数，是一个默认方法，通过 <code>new</code> 命令创建对象实例时，自动调用该方法。一个类必须有 <code>constructor</code> 方法，如果没有显式定义，一个默认的 <code>consructor</code> 方法会被默认添加。所以即使你没有添加构造函数，也是会有一个默认的构造函数的。一般 <code>constructor</code> 方法返回实例对象 <code>this</code> ，但是也可以指定 <code>constructor</code> 方法返回一个全新的对象，让返回的实例对象不是该类的实例。</p>
+<h5 id="super关键字"><a href="#super关键字" class="headerlink" title="super关键字"></a>super关键字</h5><p><code>super</code>关键字，既可以当做函数使用，也可以当作对象使用。这两种情况下，它的用法完全不用</p>
+<h5 id="1-当作函数使用"><a href="#1-当作函数使用" class="headerlink" title="1. 当作函数使用"></a>1. 当作函数使用</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class A &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class B extends A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * ES6要求，子类的构造函数必须</span><br><span class="line">     * 执行一次super()函数，否则会报错</span><br><span class="line">     *&#x2F;</span><br><span class="line">    super();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注：在 <code>constructor</code> 中必须调用 <code>super</code> 方法，因为子类没有自己的 <code>this</code> 对象，而是继承父类的 <code>this</code> 对象，然后对其进行加工,而 <code>super</code> 就代表了父类的构造函数。<code>super</code> 虽然代表了父类 A 的构造函数，但是返回的是子类 B 的实例，即 <code>super</code> 内部的 <code>this</code> 指的是 B，因此 <code>super()</code> 在这里相当于 ```A.prototype.constructor.call(this, props)``。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    console.log(new.target.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class B extends A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    super();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">new A(); &#x2F;&#x2F; A</span><br><span class="line">new B(); &#x2F;&#x2F; B</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，在 <code>super()</code> 执行时，它指向的是 子类 B 的构造函数，而不是父类 A 的构造函数。也就是说，<code>super()</code> 内部的 <code>this</code> 指向的是 B。</p>
+<h5 id="2-当作普通对象使用"><a href="#2-当作普通对象使用" class="headerlink" title="2. 当作普通对象使用"></a>2. 当作普通对象使用</h5><p>在普通方法中，指向父类的原型对象；在静态方法中，指向父类。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class A &#123;</span><br><span class="line">  c() &#123;</span><br><span class="line">    return 2;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class B extends A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    super();</span><br><span class="line">    console.log(super.c()); &#x2F;&#x2F;2</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const b &#x3D; new B();</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，子类 B 当中的 <code>super.c()</code>，就是将 <code>super</code> 当作一个对象使用。这时，<code>super</code> 在普通方法之中，指向 <code>A.prototype</code>，所以 <code>super.c()</code> 就相当于 <code>A.prototype.c()</code>。</p>
+<p><strong>通过 super 调用父类的方法时，super 会绑定子类的 this。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    this.x &#x3D; 1;</span><br><span class="line">  &#125;</span><br><span class="line">  s() &#123;</span><br><span class="line">    console.log(this.x);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class B extends A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    super();</span><br><span class="line">    this.x &#x3D; 2;</span><br><span class="line">  &#125;</span><br><span class="line">  m() &#123;</span><br><span class="line">    super.s();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let b &#x3D; new B();</span><br><span class="line">b.m(); &#x2F;&#x2F; 2</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，<code>super.s()</code> 虽然调用的是 <code>A.prototytpe.s()</code>，但是 <code>A.prototytpe.s()</code>会绑定子类 B 的 <code>this</code>，导致输出的是 2，而不是 1。也就是说，实际上执行的是 <code>super.s.call(this)</code>。</p>
+<p><strong>由于绑定子类的 this，所以如果通过 super 对某个属性赋值，这时 super 就是 this，赋值的属性会变成子类实例的属性。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    this.x &#x3D; 1;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class B extends A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    super();</span><br><span class="line">    this.x &#x3D; 2;</span><br><span class="line">    super.x &#x3D; 3;</span><br><span class="line">    console.log(super.x); &#x2F;&#x2F; undefined</span><br><span class="line">    console.log(this.x); &#x2F;&#x2F; 3</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let b &#x3D; new B();</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，<code>super.x</code> 赋值为 3，这时等同于对 <code>this.x</code> 赋值为 3。而当读取 <code>super.x</code> 的时候，调用的是 <code>A.prototype.x</code>，但并没有 <code>x</code> 方法，所以返回 undefined。</p>
+<p><strong>注意，使用 super 的时候，必须显式指定是作为函数，还是作为对象使用，否则会报错。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class A &#123;&#125;</span><br><span class="line">class B extends A &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    super();</span><br><span class="line">    console.log(super); &#x2F;&#x2F; 报错</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，<code>console.log(super);</code> 的当中的 <code>super</code>，无法看出是作为函数使用，还是作为对象使用，所以 JavaScript 引擎解析代码的时候就会报错。这是，如果能清晰的表明 <code>super</code> 的数据类型，就不会报错。</p>
+<p><strong>最后，由于对象总是继承其他对象的，所以可以在任意一个对象中，使用 super 关键字</strong></p>
+
+                </section>
+
+                
+                
+                
+
+            </article>
+
+            
+            <nav class="dis_flex al_post_nav">
+                <a class="al_post_nav_item dis_flex_acenter" href="/2021/03/11/ES6%E2%80%94%E2%80%94%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/">
+                    
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
+                        </svg>
+                        <span class="al_text_ellipsis al_post_nav_desc">ES6——遍历对象属性的几种方式</span>
+                    
+                </a>
+                <a class="al_post_nav_item dis_flex_acenter" href="/2021/03/11/%E5%85%B3%E4%BA%8Einput%E7%A6%81%E7%94%A8%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E9%97%AE%E9%A2%98/">
+                    
+                        <span class="al_text_ellipsis al_post_nav_desc">关于input禁用中文输入法的问题</span>
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-right"></use>
+                        </svg>
+                    
+                </a>
+            </nav>
+        </div>
+    </div>
+
+
+        <div class="al_index_footer dis_flex_center">
+    <div class="al_index_footer_item al_index_footer_title">
+        赵书平
+    </div>
+
+    
+    
+
+    <div class="al_index_footer_item al_index_footer_extra">
+        Created By 
+        <a target="_blank" rel="noopener" href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
+         · Power By 
+        <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+    </div>
+
+    <div class="al_index_footer_item al_index_footer_extra_right">
+        All Right Reserved
+    </div>
+</div>
+
+        <script type="text/javascript" async="async" src="/javascripts/acelog.js"></script>
+        
+        
+        
+        
+    </body>
+</html>
+        

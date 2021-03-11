@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <title>js三大家族</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="manifest" href="/site.webmanifest">
+
+        
+    
+    <link rel='stylesheet' href="/./css/dracula.css">
+
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body>
+        <header class="al_header al_pos_fixed">
+    <div class="al_header_container dis_flex_jcenter">
+        <div class="al_header_container_left">
+            <div class="al_header_site_title">
+                <a href="/">niquezhao</a>
+            </div>
+        </div>
+
+        <div class="dis_flex_jcenter">
+            <div class="al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-menu"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="al_sidebar">
+
+    <div class="al_sidebar_overlay al_full_cover"></div>
+
+    <div class="al_pos_fixed al_sidebar_cnt">
+        <div class="dis_flex_acenter al_sidebar_header">
+            <h3>niquezhao</h3>
+            <div class="al_sidebar_close al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-close"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="al_sidebar_author_cnt">
+
+            <div class="al_sidebar_author_info">
+                <h4>赵书平</h4>
+                <img class="al_sidebar_avatar" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202102%2F18%2F20210218234737_ce4cf.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1617974352&t=3218761a443e54cc13ab4c6362f57d3a">
+                <p></p>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+        
+    <div class="dis_flex_center al_lightbox_cnt al_full_cover">
+        <img class="al_lightbox_img"/>
+    </div>
+    <div class="al_page_background dis_flex_center al_full_cover"></div>
+    <div class="al_page_container">
+        <div class="al_pos_ab al_fake_background"></div>
+        <div class="al_main_container al_shadow al_main_page_container">
+            <article class="al_article">
+                <header>
+                    <h1 class="al_page_title">
+                        js三大家族
+                    </h1>
+                    <div class="al_page_info dis_flex">
+                        <div class="al_page_content_info">
+                            Thu April 1, 2021 10:36 AM
+                        </div>
+
+                        
+
+                        
+                        <span class="tags"></span>
+                    </div>
+                </header>
+
+                
+                    <div class="al_page_content_outline">
+                        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-1-%E4%B8%89%E5%A4%A7%E5%AE%B6%E6%97%8F%E5%92%8C%E4%B8%80%E4%B8%AA%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1"><span class="toc-text">1.1 三大家族和一个事件对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-2-Offset%E5%AE%B6%E6%97%8F%E7%AE%80%E4%BB%8B"><span class="toc-text">1.2 Offset家族简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-offsetWidth%E5%92%8CoffsetHight-%EF%BC%88%E6%A3%80%E6%B5%8B%E7%9B%92%E5%AD%90%E8%87%AA%E8%BA%AB%E5%AE%BD%E9%AB%98-padding-border%EF%BC%89"><span class="toc-text">1.2.1 offsetWidth和offsetHight （检测盒子自身宽高+padding+border）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-2-offsetLeft%E5%92%8CoffsetTop-%EF%BC%88%E6%A3%80%E6%B5%8B%E8%B7%9D%E7%A6%BB%E7%88%B6%E7%9B%92%E5%AD%90%E6%9C%89%E5%AE%9A%E4%BD%8D%E7%9A%84%E5%B7%A6-%E4%B8%8A%E9%9D%A2%E7%9A%84%E8%B7%9D%E7%A6%BB%EF%BC%89"><span class="toc-text">1.2.2 offsetLeft和offsetTop （检测距离父盒子有定位的左&#x2F;上面的距离）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-3-offsetParent-%EF%BC%88%E6%A3%80%E6%B5%8B%E7%88%B6%E7%B3%BB%E7%9B%92%E5%AD%90%E4%B8%AD%E5%B8%A6%E6%9C%89%E5%AE%9A%E4%BD%8D%E7%9A%84%E7%88%B6%E7%9B%92%E5%AD%90%E8%8A%82%E7%82%B9%EF%BC%89"><span class="toc-text">1.2.3 offsetParent （检测父系盒子中带有定位的父盒子节点）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-3-offsetLeft%E5%92%8Cstyle-left%E5%8C%BA%E5%88%AB"><span class="toc-text">1.3 offsetLeft和style.left区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Scroll%E5%AE%B6%E6%97%8F%E7%BB%84%E6%88%90"><span class="toc-text">Scroll家族组成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#scrollLeft%E5%92%8CscrollTop"><span class="toc-text">scrollLeft和scrollTop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%BC%E5%AE%B9%E5%86%99%E6%B3%95"><span class="toc-text">兼容写法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%8E%B7%E5%8F%96%EF%BC%88event%E7%9A%84%E8%8E%B7%E5%8F%96%EF%BC%89"><span class="toc-text">1.1 事件对象的获取（event的获取）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E5%85%BC%E5%AE%B9%E8%8E%B7%E5%8F%96%E6%96%B9%E5%BC%8F%E6%9C%89%E4%B8%A4%E7%A7%8D%EF%BC%9A"><span class="toc-text">1.2 兼容获取方式有两种：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-event%E5%86%85%E5%AE%B9%E9%87%8D%E8%A6%81%E5%86%85%E5%AE%B9"><span class="toc-text">1.3 event内容重要内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-PageY%E5%92%8CpageX%E7%9A%84%E5%85%BC%E5%AE%B9%E5%86%99%E6%B3%95%EF%BC%88%E5%BE%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-text">1.1 PageY和pageX的兼容写法（很重要）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#client%E5%AE%B6%E6%97%8F"><span class="toc-text">client家族</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E4%B8%BB%E8%A6%81%E6%88%90%E5%91%98"><span class="toc-text">1.1 主要成员</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E4%B8%89%E5%A4%A7%E5%AE%B6%E6%97%8F%E5%8C%BA%E5%88%AB%EF%BC%88%E4%B8%89%E5%A4%A7%E5%AE%B6%E6%97%8F%E6%80%BB%E7%BB%93%EF%BC%89"><span class="toc-text">1.2 三大家族区别（三大家族总结）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-Width%E5%92%8Cheight"><span class="toc-text">1.2.1 Width和height</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-2-top%E5%92%8Cleft"><span class="toc-text">1.2.2 top和left</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-client%E5%AE%B6%E6%97%8F%E7%89%B9%E6%AE%8A%E7%94%A8%E6%B3%95%E4%B9%8B-%E6%A3%80%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD-%E9%AB%98%E5%BA%A6-%E5%8F%AF%E8%A7%86%E5%8C%BA%E5%9F%9F"><span class="toc-text">1.3 client家族特殊用法之:检浏览器宽&#x2F;高度(可视区域)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Onresize%E4%BA%8B%E4%BB%B6"><span class="toc-text">1.4 Onresize事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%A0%B9%E6%8D%AE%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%AF%E8%A7%86%E5%8C%BA%E5%9F%9F%E5%A4%A7%E5%B0%8F%EF%BC%8C%E7%BB%99%E5%AE%9A%E8%83%8C%E6%99%AF%E8%89%B2"><span class="toc-text">1.5 案例：根据浏览器可视区域大小，给定背景色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-%E4%BA%8B%E4%BB%B6%E6%80%BB%E7%BB%93"><span class="toc-text">1.6 事件总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-%E8%8E%B7%E5%BE%97%E5%B1%8F%E5%B9%95%E5%AE%BD%E9%AB%98"><span class="toc-text">1.7 获得屏幕宽高</span></a></li></ol></li></ol>
+                    </div>
+                
+
+                
+                <section id="post-body">
+                    <h1 id="1-1-三大家族和一个事件对象"><a href="#1-1-三大家族和一个事件对象" class="headerlink" title="1.1 三大家族和一个事件对象"></a>1.1 三大家族和一个事件对象</h1><p>三大家族（offset/scroll/client）</p>
+<p>事件对象/event （事件被触动时，鼠标和键盘的状态）（通过属性控制）</p>
+<h1 id="1-2-Offset家族简介"><a href="#1-2-Offset家族简介" class="headerlink" title="1.2 Offset家族简介"></a>1.2 Offset家族简介</h1><p>offset这个单词本身是–偏移，补偿，位移的意思。</p>
+<p>js中有一套方便的获取元素尺寸的办法就是offset家族；</p>
+<p>offsetWidth和offsetHight以及offsetLeft和offsetTop以及offsetParent</p>
+<p>共同组成了offset家族。</p>
+<h3 id="1-2-1-offsetWidth和offsetHight-（检测盒子自身宽高-padding-border）"><a href="#1-2-1-offsetWidth和offsetHight-（检测盒子自身宽高-padding-border）" class="headerlink" title="1.2.1 offsetWidth和offsetHight （检测盒子自身宽高+padding+border）"></a>1.2.1 offsetWidth和offsetHight （检测盒子自身宽高+padding+border）</h3><p>这两个属性，他们绑定在了所有的节点元素上。获取之后，只要调用这两个属性，我们就能够获取元素节点的宽和高。</p>
+<p>offset宽/高 = 盒子自身的宽/高 + padding+border；</p>
+<p>offsetWidth =width+padding+border；</p>
+<p>offsetHeight =Height+padding+border；</p>
+<h3 id="1-2-2-offsetLeft和offsetTop-（检测距离父盒子有定位的左-上面的距离）"><a href="#1-2-2-offsetLeft和offsetTop-（检测距离父盒子有定位的左-上面的距离）" class="headerlink" title="1.2.2 offsetLeft和offsetTop （检测距离父盒子有定位的左/上面的距离）"></a>1.2.2 offsetLeft和offsetTop （检测距离父盒子有定位的左/上面的距离）</h3><p>返回距离上级盒子（带有定位）左边s的位置</p>
+<p>如果父级都没有定位则以body为准</p>
+<p>offsetLeft 从父亲的padding 开始算,父亲的border 不算。</p>
+<p>在父盒子有定位的情况下，offsetLeft == style.left(去掉px)</p>
+<h3 id="1-2-3-offsetParent-（检测父系盒子中带有定位的父盒子节点）"><a href="#1-2-3-offsetParent-（检测父系盒子中带有定位的父盒子节点）" class="headerlink" title="1.2.3 offsetParent （检测父系盒子中带有定位的父盒子节点）"></a>1.2.3 offsetParent （检测父系盒子中带有定位的父盒子节点）</h3><p>1、返回改对象的父级 （带有定位）</p>
+<p> 如果当前元素的父级元素没有进行CSS定位 （position为absolute或 relative，fixed）， offsetParent为body。</p>
+<p>2、如果当前元素的父级元素中有CSS定位 （position为absolute或 relative，fixed）， offsetParent取最近的那个父级元素。</p>
+<h1 id="1-3-offsetLeft和style-left区别"><a href="#1-3-offsetLeft和style-left区别" class="headerlink" title="1.3 offsetLeft和style.left区别"></a>1.3 offsetLeft和style.left区别</h1><p>一、最大区别在于offsetLeft可以返回没有定位盒子的距离左侧的位置。</p>
+<p>而 style.left不可以</p>
+<p>二、offsetTop 返回的是数字，而 style.top 返回的是字符串，除了数字外还带有单位：px。</p>
+<p>三、offsetTop 只读，而 style.top 可读写。（只读是获取值，可写是赋值）</p>
+<p>四、如果没有给 HTML 元素指定过 top 样式，则style.top 返回的是空字符串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Code</span><br><span class="line">style.left在&#x3D;的左边和右边还不一样。（左边的时候是属性，右边的时候是值）</span><br></pre></td></tr></table></figure>
+
+<h1 id="Scroll家族组成"><a href="#Scroll家族组成" class="headerlink" title="Scroll家族组成"></a>Scroll家族组成</h1><p>ScrollWidth和scrollHeight（不包括border）</p>
+<p>检测盒子的宽高。（调用者：节点元素。属性。）</p>
+<p>盒子内容的宽高。（如果有内容超出了，显示内容的高度）</p>
+<p>IE567可以比盒子小。 IE8+火狐谷歌不能比盒子小</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h2 id="scrollLeft和scrollTop"><a href="#scrollLeft和scrollTop" class="headerlink" title="scrollLeft和scrollTop"></a>scrollLeft和scrollTop</h2><p>网页，被浏览器遮挡的头部和左边部分。</p>
+<p>被卷去的头部和左边部分。</p>
+<p>兼容性问题</p>
+<p>一、未声明 DTD（谷歌只认识他）</p>
+<p>document.body.scrollTop</p>
+<p>二、已经声明DTD（IE678只认识他）</p>
+<p>document.documentElement.scrollTop</p>
+<p>三、火狐/谷歌/ie9+以上支持的</p>
+<p>window.pageYOffset</p>
+<h2 id="兼容写法"><a href="#兼容写法" class="headerlink" title="兼容写法"></a>兼容写法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Code</span><br><span class="line">var aaa &#x3D; window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;</span><br><span class="line">Code</span><br><span class="line">var aaa &#x3D; document.documentElement.scrollTop + document.body.scrollTop;</span><br></pre></td></tr></table></figure>
+
+<p>事件event</p>
+<h2 id="1-1-事件对象的获取（event的获取）"><a href="#1-1-事件对象的获取（event的获取）" class="headerlink" title="1.1 事件对象的获取（event的获取）"></a>1.1 事件对象的获取（event的获取）</h2><p>IE678中，window.event</p>
+<p>在火狐谷歌中，event或者，在事件绑定的函数中，加参，这个参数就是event.</p>
+<p>Box.onclick = function (aaa){ aaa就是event }</p>
+<h2 id="1-2-兼容获取方式有两种："><a href="#1-2-兼容获取方式有两种：" class="headerlink" title="1.2 兼容获取方式有两种："></a>1.2 兼容获取方式有两种：</h2><p>不写参数直接使用event;</p>
+<p>写参数，但是为event….var event = event || window.event;(主要用这种)</p>
+<h2 id="1-3-event内容重要内容"><a href="#1-3-event内容重要内容" class="headerlink" title="1.3 event内容重要内容"></a>1.3 event内容重要内容</h2><p><a target="_blank" rel="noopener" href="https://img-blog.csdn.net/20170330141538969?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvV1ppb3M=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center"><img src="https://img-blog.csdn.net/20170330141538969?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvV1ppb3M=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img"></a></p>
+<p>PageY/pageX: 鼠标位于整个网页页面的顶部和左侧部分的距离。（页面）</p>
+<p>ScreenY/screenX: 鼠标位于屏幕的上方和左侧的距离。（屏幕）</p>
+<p>ClientX/clientY: 鼠标位于浏览器的左侧和顶部的距离。（浏览器大小和位置）</p>
+<h2 id="1-1-PageY和pageX的兼容写法（很重要）"><a href="#1-1-PageY和pageX的兼容写法（很重要）" class="headerlink" title="1.1 PageY和pageX的兼容写法（很重要）"></a>1.1 PageY和pageX的兼容写法（很重要）</h2><p>在页面位置就等于 = 看得见的+看不见的</p>
+<p>pageY/pageX=event.clientY/clientX+scroll().top/scroll().left</p>
+<h1 id="client家族"><a href="#client家族" class="headerlink" title="client家族"></a>client家族</h1><h2 id="1-1-主要成员"><a href="#1-1-主要成员" class="headerlink" title="1.1 主要成员"></a>1.1 主要成员</h2><p>1、clientWidth 获取网页可视区域宽度（两种用法）</p>
+<p>clientHeight 获取网页可视区域高度（两种用法）</p>
+<p>调用者不同，意义不同：</p>
+<p> 盒子调用： 指盒子本身。</p>
+<p> body/html调用： 可视区域大小。</p>
+<p>2、clientX 鼠标距离可视区域左侧距离（event调用）</p>
+<p>clientY 鼠标距离可视区域上侧距离（event调用）</p>
+<p>3、clientTop/clientLeft 盒子的border宽高</p>
+<h2 id="1-2-三大家族区别（三大家族总结）"><a href="#1-2-三大家族区别（三大家族总结）" class="headerlink" title="1.2 三大家族区别（三大家族总结）"></a>1.2 三大家族区别（三大家族总结）</h2><h3 id="1-2-1-Width和height"><a href="#1-2-1-Width和height" class="headerlink" title="1.2.1 Width和height"></a>1.2.1 Width和height</h3><p>clientWidth = width + padding</p>
+<p>clientHeight = height + padding</p>
+<p>offsetWidth = width + padding + border</p>
+<p>offsetHeight = height + padding + border</p>
+<p>scrollWidth = 内容宽度（不包含border）width + padding</p>
+<p>scrollHeight = 内容高度（不包含border）</p>
+<h3 id="1-2-2-top和left"><a href="#1-2-2-top和left" class="headerlink" title="1.2.2 top和left"></a>1.2.2 top和left</h3><p>offsetTop/offsetLeft：</p>
+<p> 调用者：任意元素。(盒子为主)</p>
+<p> 作用：距离父系盒子中带有定位的距离。</p>
+<p>scrollTop/scrollLeft:(盒子也可以调用，必须有滚动条)</p>
+<p> 调用者：document.body.scrollTop/…..(window)</p>
+<p> 作用：浏览器无法显示的部分（被卷去的部分）。</p>
+<p>clientY/clientX:（clientTop/clientLeft 值的是border）</p>
+<p> 调用者：event.clientX(event)</p>
+<p> 作用：鼠标距离浏览器可视区域的距离（左、上）。</p>
+<p>// width和height<br>// offset带border<br>// scroll不带border，内容的宽高<br>// client不带border</p>
+<p>// top和left<br>// offset距离父系盒子带有定位的盒子之间的距离<br>// scroll被卷去的部分的距离<br>// clientborder的宽高</p>
+<p>//clientX和clientY<br>// event调用，鼠标距离浏览器的可视区域的距离</p>
+<h2 id="1-3-client家族特殊用法之-检浏览器宽-高度-可视区域"><a href="#1-3-client家族特殊用法之-检浏览器宽-高度-可视区域" class="headerlink" title="1.3 client家族特殊用法之:检浏览器宽/高度(可视区域)"></a>1.3 client家族特殊用法之:检浏览器宽/高度(可视区域)</h2><p><a target="_blank" rel="noopener" href="https://img-blog.csdn.net/20170331094037076?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvV1ppb3M=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center"><img src="https://img-blog.csdn.net/20170331094037076?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvV1ppb3M=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img"></a></p>
+<h2 id="1-4-Onresize事件"><a href="#1-4-Onresize事件" class="headerlink" title="1.4 Onresize事件"></a>1.4 Onresize事件</h2><p>只要浏览器的大小改变，哪怕1像素，都会触动这个事件。</p>
+<h2 id="1-5-案例：根据浏览器可视区域大小，给定背景色"><a href="#1-5-案例：根据浏览器可视区域大小，给定背景色" class="headerlink" title="1.5 案例：根据浏览器可视区域大小，给定背景色"></a>1.5 案例：根据浏览器可视区域大小，给定背景色</h2><h2 id="1-6-事件总结"><a href="#1-6-事件总结" class="headerlink" title="1.6 事件总结"></a>1.6 事件总结</h2><p>区分：</p>
+<p>1.window.onscroll 屏幕滑动</p>
+<p>2.window.onresize 浏览器大小变化</p>
+<p>3.window.onload 页面加载完毕</p>
+<p>4.div.onmousemove 鼠标在盒子上移动</p>
+<p> （注意：不是盒子移动！！！）</p>
+<p>5.onmouseup/onmousedown == onclick</p>
+<h2 id="1-7-获得屏幕宽高"><a href="#1-7-获得屏幕宽高" class="headerlink" title="1.7 获得屏幕宽高"></a>1.7 获得屏幕宽高</h2><p>window.screen.width</p>
+<p>分辨率是屏幕图像的精密度，指显示器所能显示的像素有多少。</p>
+<p>我们的电脑一般：</p>
+<p>横向1280个像素点，</p>
+<p>纵向960个像素点。</p>
+<p>我们看电影的时候是满屏和半屏的，就是这。</p>
+
+                </section>
+
+                
+                
+                
+
+            </article>
+
+            
+            <nav class="dis_flex al_post_nav">
+                <a class="al_post_nav_item dis_flex_acenter" href="/2021/04/15/%E6%B5%85%E8%B0%88TypeScript/">
+                    
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
+                        </svg>
+                        <span class="al_text_ellipsis al_post_nav_desc">浅谈TypeScript</span>
+                    
+                </a>
+                <a class="al_post_nav_item dis_flex_acenter" href="/2021/03/12/hello-world/">
+                    
+                        <span class="al_text_ellipsis al_post_nav_desc">JS 中的闭包与模块</span>
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-right"></use>
+                        </svg>
+                    
+                </a>
+            </nav>
+        </div>
+    </div>
+
+
+        <div class="al_index_footer dis_flex_center">
+    <div class="al_index_footer_item al_index_footer_title">
+        赵书平
+    </div>
+
+    
+    
+
+    <div class="al_index_footer_item al_index_footer_extra">
+        Created By 
+        <a target="_blank" rel="noopener" href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
+         · Power By 
+        <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+    </div>
+
+    <div class="al_index_footer_item al_index_footer_extra_right">
+        All Right Reserved
+    </div>
+</div>
+
+        <script type="text/javascript" async="async" src="/javascripts/acelog.js"></script>
+        
+        
+        
+        
+    </body>
+</html>
+        
