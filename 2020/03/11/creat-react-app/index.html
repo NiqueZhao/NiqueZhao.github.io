@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <title>creat-react-app</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="manifest" href="/site.webmanifest">
+
+        
+    
+    <link rel='stylesheet' href="/./css/dracula.css">
+
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body>
+        <header class="al_header al_pos_fixed">
+    <div class="al_header_container dis_flex_jcenter">
+        <div class="al_header_container_left">
+            <div class="al_header_site_title">
+                <a href="/">niquezhao</a>
+            </div>
+        </div>
+
+        <div class="dis_flex_jcenter">
+            <div class="al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-menu"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="al_sidebar">
+
+    <div class="al_sidebar_overlay al_full_cover"></div>
+
+    <div class="al_pos_fixed al_sidebar_cnt">
+        <div class="dis_flex_acenter al_sidebar_header">
+            <h3>niquezhao</h3>
+            <div class="al_sidebar_close al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-close"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="al_sidebar_author_cnt">
+
+            <div class="al_sidebar_author_info">
+                <h4>赵书平</h4>
+                <img class="al_sidebar_avatar" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202102%2F18%2F20210218234737_ce4cf.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1617974352&t=3218761a443e54cc13ab4c6362f57d3a">
+                <p></p>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+        
+    <div class="dis_flex_center al_lightbox_cnt al_full_cover">
+        <img class="al_lightbox_img"/>
+    </div>
+    <div class="al_page_background dis_flex_center al_full_cover"></div>
+    <div class="al_page_container">
+        <div class="al_pos_ab al_fake_background"></div>
+        <div class="al_main_container al_shadow al_main_page_container">
+            <article class="al_article">
+                <header>
+                    <h1 class="al_page_title">
+                        creat-react-app
+                    </h1>
+                    <div class="al_page_info dis_flex">
+                        <div class="al_page_content_info">
+                            Wed March 11, 2020 08:53 PM
+                        </div>
+
+                        
+
+                        
+                        <span class="tags"></span>
+                    </div>
+                </header>
+
+                
+                    <div class="al_page_content_outline">
+                        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E3%80%81%E5%88%9D%E5%A7%8B%E5%8C%96React-App"><span class="toc-text">1、初始化React App</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1%E3%80%81%E5%AE%89%E8%A3%85"><span class="toc-text">1.1、安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2%E3%80%81%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAapp%E9%A1%B9%E7%9B%AE"><span class="toc-text">1.2、创建一个app项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3%E3%80%81%E5%90%AF%E5%8A%A8%E7%BC%96%E8%AF%91"><span class="toc-text">1.3、启动编译</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%E3%80%81webpack%E9%85%8D%E7%BD%AE"><span class="toc-text">2、webpack配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1%E3%80%81react-app-rewired"><span class="toc-text">2.1、react-app-rewired</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1%E3%80%81%E5%AE%89%E8%A3%85"><span class="toc-text">2.1.1、安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2%E3%80%81%E4%BF%AE%E6%94%B9package-json"><span class="toc-text">2.1.2、修改package.json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-3%E3%80%81%E6%96%B0%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">2.1.3、新建配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E9%85%8D%E7%BD%AE%E8%B7%AF%E5%BE%84"><span class="toc-text">(1) 配置路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE-loader"><span class="toc-text">(2) 配置 loader</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2%E3%80%81proxy%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE"><span class="toc-text">2.2、proxy代理配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1%E3%80%81%E5%AE%89%E8%A3%85"><span class="toc-text">2.2.1、安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2%E3%80%81-%E6%96%B0%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">2.2.2、 新建配置文件</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                
+
+                
+                <section id="post-body">
+                    <h1 id="1、初始化React-App"><a href="#1、初始化React-App" class="headerlink" title="1、初始化React App"></a>1、初始化React App</h1><h2 id="1-1、安装"><a href="#1-1、安装" class="headerlink" title="1.1、安装"></a>1.1、安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 全局安装</span><br><span class="line">npm install -g create-react-app</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-2、创建一个app项目"><a href="#1-2、创建一个app项目" class="headerlink" title="1.2、创建一个app项目"></a>1.2、创建一个app项目</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 构建一个my-app的项目</span><br><span class="line">npm init react-app my-app</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-3、启动编译"><a href="#1-3、启动编译" class="headerlink" title="1.3、启动编译"></a>1.3、启动编译</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure>
+
+<h1 id="2、webpack配置"><a href="#2、webpack配置" class="headerlink" title="2、webpack配置"></a>2、webpack配置</h1><h2 id="2-1、react-app-rewired"><a href="#2-1、react-app-rewired" class="headerlink" title="2.1、react-app-rewired"></a>2.1、react-app-rewired</h2><blockquote>
+<p>使用 react-app-rewired 添加或修改 webpack 的 配置</p>
+</blockquote>
+<h3 id="2-1-1、安装"><a href="#2-1-1、安装" class="headerlink" title="2.1.1、安装"></a>2.1.1、安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i react-app-rewired --save-dev</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-1-2、修改package-json"><a href="#2-1-2、修改package-json" class="headerlink" title="2.1.2、修改package.json"></a>2.1.2、修改package.json</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;start&quot;: &quot;react-app-rewired start&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;react-app-rewired build&quot;,</span><br><span class="line">    &quot;test&quot;: &quot;react-app-rewired test&quot;,</span><br><span class="line">    &quot;eject&quot;: &quot;react-scripts eject&quot;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-1-3、新建配置文件"><a href="#2-1-3、新建配置文件" class="headerlink" title="2.1.3、新建配置文件"></a>2.1.3、新建配置文件</h3><blockquote>
+<p>在根目录下新建config-override.js</p>
+</blockquote>
+<h4 id="1-配置路径"><a href="#1-配置路径" class="headerlink" title="(1) 配置路径"></a>(1) 配置路径</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const path &#x3D; require(&#39;path&#39;);</span><br><span class="line">function resolve(dir) &#123;</span><br><span class="line">    return path.join(__dirname, &#39;.&#39;, dir)</span><br><span class="line">&#125;</span><br><span class="line">module.exports &#x3D; function override(config, env) &#123;</span><br><span class="line">    config.resolve.alias &#x3D; &#123;</span><br><span class="line">        &#39;@components&#39;: resolve(&#39;src&#x2F;components&#39;),</span><br><span class="line">        &#39;@pages&#39;: resolve(&#39;src&#x2F;pages&#39;),</span><br><span class="line">        &#39;@util&#39;: resolve(&#39;src&#x2F;util&#39;),</span><br><span class="line">        &#39;@config&#39;: resolve(&#39;config&#39;)</span><br><span class="line">    &#125;</span><br><span class="line">    return config;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-配置-loader"><a href="#2-配置-loader" class="headerlink" title="(2) 配置 loader"></a>(2) 配置 loader</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2、proxy代理配置"><a href="#2-2、proxy代理配置" class="headerlink" title="2.2、proxy代理配置"></a>2.2、proxy代理配置</h2><h3 id="2-2-1、安装"><a href="#2-2-1、安装" class="headerlink" title="2.2.1、安装"></a>2.2.1、安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm http-proxy-middleware -dev</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-2、-新建配置文件"><a href="#2-2-2、-新建配置文件" class="headerlink" title="2.2.2、 新建配置文件"></a>2.2.2、 新建配置文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const proxy &#x3D; require(&#39;http-proxy-middleware&#39;);</span><br><span class="line">module.exports &#x3D; function (app) &#123;</span><br><span class="line">    app.use(</span><br><span class="line">        proxy(&#39;&#x2F;api&#39;, &#123;</span><br><span class="line">            target: &#39;http:&#x2F;&#x2F;localhost:4000&#39;,</span><br><span class="line">            changeOrigin: true,</span><br><span class="line">            pathRewrite: &#123;</span><br><span class="line">                &quot;^&#x2F;api&quot;: &quot;&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    );</span><br><span class="line">    app.use(proxy(...));</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>注意：代理路径匹配是懒惰的，当满足正则时则停止匹配。因此，当添加多个代理配置时，要注意代理路径的冲突，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">app.use(</span><br><span class="line">    proxy(&#39;&#x2F;api&#x2F;&#39;, &#123;</span><br><span class="line">        target: &#39;http:&#x2F;&#x2F;localhost:3000&#39;,</span><br><span class="line">    &#125;)</span><br><span class="line">);</span><br><span class="line">app.use(</span><br><span class="line">    proxy(&#39;&#x2F;api2&#39;,&#123;</span><br><span class="line">        target: &#39;http:&#x2F;&#x2F;localhost:4000&#39;,</span><br><span class="line">    &#125;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>当请求路径为<code>/api2/audio</code> 时，我们想代理到 4000端口，但 却被3000端口代理了，这是因为<code>/api</code>满足<code>/api2</code>,则我们在配置时应该参照如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">app.use(</span><br><span class="line">    proxy(&#39;&#x2F;api&#39;, &#123;</span><br><span class="line">        target: &#39;http:&#x2F;&#x2F;localhost:3000&#39;,</span><br><span class="line">    &#125;)</span><br><span class="line">);</span><br><span class="line">app.use(</span><br><span class="line">    proxy(&#39;&#x2F;api2&#x2F;&#39;,&#123;</span><br><span class="line">        target: &#39;http:&#x2F;&#x2F;localhost:4000&#39;,</span><br><span class="line">    &#125;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+                </section>
+
+                
+                
+                
+
+            </article>
+
+            
+            <nav class="dis_flex al_post_nav">
+                <a class="al_post_nav_item dis_flex_acenter" href="/2020/03/20/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0/">
+                    
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
+                        </svg>
+                        <span class="al_text_ellipsis al_post_nav_desc">工具函数</span>
+                    
+                </a>
+                <a class="al_post_nav_item dis_flex_acenter" href="/2020/03/09/%E5%8E%BB%E9%87%8D%E7%AE%97%E6%B3%95/">
+                    
+                        <span class="al_text_ellipsis al_post_nav_desc">去重算法</span>
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-right"></use>
+                        </svg>
+                    
+                </a>
+            </nav>
+        </div>
+    </div>
+
+
+        <div class="al_index_footer dis_flex_center">
+    <div class="al_index_footer_item al_index_footer_title">
+        赵书平
+    </div>
+
+    
+    
+
+    <div class="al_index_footer_item al_index_footer_extra">
+        Created By 
+        <a target="_blank" rel="noopener" href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
+         · Power By 
+        <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+    </div>
+
+    <div class="al_index_footer_item al_index_footer_extra_right">
+        All Right Reserved
+    </div>
+</div>
+
+        <script type="text/javascript" async="async" src="/javascripts/acelog.js"></script>
+        
+        
+        
+        
+    </body>
+</html>
+        

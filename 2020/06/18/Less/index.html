@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <title>Less</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="manifest" href="/site.webmanifest">
+
+        
+    
+    <link rel='stylesheet' href="/./css/dracula.css">
+
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body>
+        <header class="al_header al_pos_fixed">
+    <div class="al_header_container dis_flex_jcenter">
+        <div class="al_header_container_left">
+            <div class="al_header_site_title">
+                <a href="/">niquezhao</a>
+            </div>
+        </div>
+
+        <div class="dis_flex_jcenter">
+            <div class="al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-menu"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="al_sidebar">
+
+    <div class="al_sidebar_overlay al_full_cover"></div>
+
+    <div class="al_pos_fixed al_sidebar_cnt">
+        <div class="dis_flex_acenter al_sidebar_header">
+            <h3>niquezhao</h3>
+            <div class="al_sidebar_close al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-close"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="al_sidebar_author_cnt">
+
+            <div class="al_sidebar_author_info">
+                <h4>赵书平</h4>
+                <img class="al_sidebar_avatar" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202102%2F18%2F20210218234737_ce4cf.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1617974352&t=3218761a443e54cc13ab4c6362f57d3a">
+                <p></p>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+        
+    <div class="dis_flex_center al_lightbox_cnt al_full_cover">
+        <img class="al_lightbox_img"/>
+    </div>
+    <div class="al_page_background dis_flex_center al_full_cover"></div>
+    <div class="al_page_container">
+        <div class="al_pos_ab al_fake_background"></div>
+        <div class="al_main_container al_shadow al_main_page_container">
+            <article class="al_article">
+                <header>
+                    <h1 class="al_page_title">
+                        Less
+                    </h1>
+                    <div class="al_page_info dis_flex">
+                        <div class="al_page_content_info">
+                            Thu June 18, 2020 08:31 PM
+                        </div>
+
+                        
+
+                        
+                        <span class="tags"></span>
+                    </div>
+                </header>
+
+                
+                    <div class="al_page_content_outline">
+                        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Less"><span class="toc-text">Less</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8less%E7%BC%96%E8%AF%91"><span class="toc-text">使用less编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VsCode%E4%B8%AD%E4%BD%BF%E7%94%A8less"><span class="toc-text">VsCode中使用less</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#less%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">less的基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-text">注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%B7%E5%85%A5"><span class="toc-text">混入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B5%8C%E5%A5%97"><span class="toc-text">嵌套</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                
+
+                
+                <section id="post-body">
+                    <h1 id="Less"><a href="#Less" class="headerlink" title="Less"></a>Less</h1><p>less是动态的样式表<strong>语言</strong>，通过简明的语法定义，使编写cs’s的工作变得非常简单，本质上，less包含一套自定义的语法以及i一个解析器。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>1、安装Nodejs环境</p>
+<p>2、cmd中执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g less</span><br></pre></td></tr></table></figure>
+
+<p>3、验证</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lessc -v    &#x2F;&#x2F;若正确出现less版本号则安装成功</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用less编译"><a href="#使用less编译" class="headerlink" title="使用less编译"></a>使用less编译</h2><p> 先创建一个less文件 demo.less</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@color: #ccc;</span><br><span class="line">div &#123;</span><br><span class="line">	color: @color;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> 在当前目录下运行cmd，输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lessc demo.less demo.css</span><br></pre></td></tr></table></figure>
+
+<p>运行之后会在当前目录下生成一个demo.css文件，内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">  color: #ccc;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="VsCode中使用less"><a href="#VsCode中使用less" class="headerlink" title="VsCode中使用less"></a>VsCode中使用less</h2><p> 1、添加 Easy Less 扩展插件，安装，安装完后最好重启一次VSCode；</p>
+<p> 2、在需要生成css文件的地方，新建一个<code>.less</code>文件；</p>
+<p> 3、保存后，会在同级目录下自动生成一个同名css文件</p>
+<h2 id="less的基本语法"><a href="#less的基本语法" class="headerlink" title="less的基本语法"></a>less的基本语法</h2><h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*注释*&#x2F;        这种注释方式会也会编译到css中</span><br><span class="line">&#x2F;&#x2F;              这种注释方式在编译时会被去除</span><br></pre></td></tr></table></figure>
+
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p> @变量名: 值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@baseColor: #eee;     &#x2F;&#x2F;申明一个变量并赋值</span><br><span class="line">a &#123;</span><br><span class="line">    color: @@baseColor;   &#x2F;&#x2F;使用变量</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="混入"><a href="#混入" class="headerlink" title="混入"></a>混入</h3><p> 可以将一个定义好的变量引入到另一个样式中 类似于函数的调用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;先写好一个样式  @r 类似于函数的形参</span><br><span class="line">.addRadius(@r:10px)&#123;  &#x2F;&#x2F;也可以设置默认值</span><br><span class="line">    border-radius: @r;</span><br><span class="line">    -wekit-border-radius: @r;</span><br><span class="line">    -moz-border-radius: @r;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;使用样式</span><br><span class="line">div &#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">    height: 200px;</span><br><span class="line">    .addRadius(5px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h3><p> 可以实现选择器的继承，可以减少代码量，同时使代码结构更加清晰</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.jd_hearder &#123;&#125;</span><br><span class="line">.jd_hearder &gt; div &#123;&#125;</span><br><span class="line">.jd_hearder &gt; div &gt; h3 &#123;&#125;</span><br><span class="line">.jd_hearder &gt; div &gt; h3::before &#123;&#125;</span><br><span class="line">.jd_hearder	&gt; div &gt; a:hover &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面是我们之前常用的写样式的方式，代码是非常冗余的，并且结构不清晰；</p>
+<p>可以用less来解决这类问题，并且编译后的css文件，与上面的代码的效果是一样的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">.jd_header &#123;</span><br><span class="line">    width: 100%；</span><br><span class="line">        height: 200px;</span><br><span class="line">    .addRadius();</span><br><span class="line">    &#x2F;&#x2F;嵌套一个元素</span><br><span class="line">    div &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">        h3 &#123;</span><br><span class="line">            height: 200px;</span><br><span class="line">            ::before    &#x2F;&#x2F;相当于 h3 ::before</span><br><span class="line">            $::before &#123;&#125;&#x2F;&#x2F;相当于 h3::before     注意区别</span><br><span class="line">        &#125;</span><br><span class="line">        a &#123;</span><br><span class="line">            color: @baseColor;</span><br><span class="line">            $:hover &#123;   &#x2F;&#x2F;相当于 a:hover</span><br><span class="line">                text-decoration: none;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                </section>
+
+                
+                
+                
+
+            </article>
+
+            
+            <nav class="dis_flex al_post_nav">
+                <a class="al_post_nav_item dis_flex_acenter" href="/2020/08/08/ES6%E6%96%B0%E7%89%B9%E6%80%A7/">
+                    
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
+                        </svg>
+                        <span class="al_text_ellipsis al_post_nav_desc">ES6新特性</span>
+                    
+                </a>
+                <a class="al_post_nav_item dis_flex_acenter" href="/2020/06/18/%E5%85%B3%E4%BA%8E%E6%B5%AE%E5%8A%A8%E7%9A%84%E8%8B%A5%E5%B9%B2%E9%97%AE%E9%A2%98/">
+                    
+                        <span class="al_text_ellipsis al_post_nav_desc">关于浮动的若干问题</span>
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-right"></use>
+                        </svg>
+                    
+                </a>
+            </nav>
+        </div>
+    </div>
+
+
+        <div class="al_index_footer dis_flex_center">
+    <div class="al_index_footer_item al_index_footer_title">
+        赵书平
+    </div>
+
+    
+    
+
+    <div class="al_index_footer_item al_index_footer_extra">
+        Created By 
+        <a target="_blank" rel="noopener" href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
+         · Power By 
+        <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+    </div>
+
+    <div class="al_index_footer_item al_index_footer_extra_right">
+        All Right Reserved
+    </div>
+</div>
+
+        <script type="text/javascript" async="async" src="/javascripts/acelog.js"></script>
+        
+        
+        
+        
+    </body>
+</html>
+        
